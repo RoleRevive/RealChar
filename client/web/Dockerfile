@@ -11,8 +11,8 @@ ENV REACT_APP_API_HOST $REACT_APP_API_HOST
 
 # Copy package.json and package-lock.json before other files
 # Utilise Docker cache to save re-installing dependencies if unchanged
-COPY RealChar/client/web/package.json
-COPY RealChar/client/web/package-lock.json
+COPY RealChar/client/web/package.json ./
+COPY RealChar/client/web/package-lock.json ./
 
 # Install dependencies
 RUN npm install
